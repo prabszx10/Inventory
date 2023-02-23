@@ -148,3 +148,7 @@
 					</div>
 					<!--end::Toolbar-->
 @endsection
+
+@section('js')
+	{{-- @include('BackEnd.Dashboard.js') --}}
+@endsection
