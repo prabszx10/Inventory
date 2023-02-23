@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\BarangController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,14 +15,21 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::controller(DashboardController::class)->name('dashboard.')->group(function () {
-    Route::any('/', 'index')->name('index');
+Route::controller(DashboardController::class)->group(function () {
+    Route::any('/', 'index');
 });
 
 Route::controller(UserController::class)->name('user.')->prefix('user')->group(function () {
     $route = array('index', 'insert', 'update','select');  
     foreach ($route as $route) {
-        Route::any('/'.$route, $route)->name($route);
+        Route::any('/'.$route=='index'?'':$route, $route)->name($route);
+    }
+});
+
+Route::controller(BarangController::class)->name('barang.')->prefix('barang')->group(function () {
+    $route = array('index', 'insert', 'update','delete','select');  
+    foreach ($route as $route) {
+        Route::any('/'.$route=='index'?'':$route, $route)->name($route);
     }
 });
 
