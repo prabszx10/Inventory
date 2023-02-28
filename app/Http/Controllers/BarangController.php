@@ -9,6 +9,10 @@ use Ramsey\Uuid\Uuid;
 
 class BarangController extends Controller
 {
+    public function index(){
+        return view('BackEnd.Barang.index');
+    }
+
     public function select(){
         try {
             $operation = Barang::where('barang_status',1)->get();
@@ -21,11 +25,13 @@ class BarangController extends Controller
     public function insert(Request $request){
         try {
             $data = $request->all();
+            // print_r($data);exit;
             $request->validate([
                 'barang_nama'=> 'required',
                 'barang_keterangan'=> 'required',
                 'barang_stock'=> 'required',
                 'barang_satuan'=> 'required',
+                'barang_harga'=> 'required',
             ]);
             
             $uuid = Uuid::uuid5(Uuid::NAMESPACE_DNS, Str::random());

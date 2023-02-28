@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('history_barang_status',50);
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
+            $table->foreign('history_barang_barang_id')->references('barang_id')->on('barangs')->onDelete('cascade');
+
         });
     }
 

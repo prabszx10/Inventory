@@ -11,8 +11,7 @@
                 <!--begin::Svg Icon | path: icons/duotune/abstract/abs015.svg-->
                 <span class="svg-icon svg-icon-2">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M21 7H3C2.4 7 2 6.6 2 6V4C2 3.4 2.4 3 3 3H21C21.6 3 22 3.4 22 4V6C22 6.6 21.6 7 21 7Z"
+                        <path d="M21 7H3C2.4 7 2 6.6 2 6V4C2 3.4 2.4 3 3 3H21C21.6 3 22 3.4 22 4V6C22 6.6 21.6 7 21 7Z"
                             fill="currentColor" />
                         <path opacity="0.3"
                             d="M21 14H3C2.4 14 2 13.6 2 13V11C2 10.4 2.4 10 3 10H21C21.6 10 22 10.4 22 11V13C22 13.6 21.6 14 21 14ZM22 20V18C22 17.4 21.6 17 21 17H3C2.4 17 2 17.4 2 18V20C2 20.6 2.4 21 3 21H21C21.6 21 22 20.6 22 20Z"
@@ -24,8 +23,7 @@
             <!--end::Heaeder menu toggle-->
             <a href="../../demo11/dist/index.html">
                 <img alt="Logo" src="assets/media/logos/demo11.svg" class="theme-light-show h-20px h-lg-30px" />
-                <img alt="Logo" src="assets/media/logos/demo11-dark.svg"
-                    class="theme-dark-show h-20px h-lg-30px" />
+                <img alt="Logo" src="assets/media/logos/demo11-dark.svg" class="theme-dark-show h-20px h-lg-30px" />
             </a>
         </div>
         <!--end::Header Logo-->
@@ -133,8 +131,8 @@
                                     <!--begin::Symbol-->
                                     <div class="symbol symbol-40px me-4">
                                         <span class="symbol-label bg-light">
-                                            <img class="w-20px h-20px"
-                                                src="assets/media/svg/brand-logos/volicity-9.svg" alt="" />
+                                            <img class="w-20px h-20px" src="assets/media/svg/brand-logos/volicity-9.svg"
+                                                alt="" />
                                         </span>
                                     </div>
                                     <!--end::Symbol-->
@@ -238,10 +236,8 @@
                                                         fill="currentColor" />
                                                     <rect x="7" y="12" width="10" height="2" rx="1"
                                                         fill="currentColor" />
-                                                    <rect x="7" y="7" width="6" height="2" rx="1"
-                                                        fill="currentColor" />
-                                                    <path d="M15 8H20L14 2V7C14 7.6 14.4 8 15 8Z"
-                                                        fill="currentColor" />
+                                                    <rect x="7" y="7" width="6" height="2" rx="1" fill="currentColor" />
+                                                    <path d="M15 8H20L14 2V7C14 7.6 14.4 8 15 8Z" fill="currentColor" />
                                                 </svg>
                                             </span>
                                             <!--end::Svg Icon-->
@@ -332,8 +328,7 @@
                                                     <path
                                                         d="M9 16.5C10.95 16.5 12.75 15.75 14.025 14.55C13.425 12.675 11.4 11.25 9 11.25C6.6 11.25 4.57499 12.675 3.97499 14.55C5.24999 15.75 7.05 16.5 9 16.5Z"
                                                         fill="currentColor" />
-                                                    <rect x="7" y="6" width="4" height="4" rx="2"
-                                                        fill="currentColor" />
+                                                    <rect x="7" y="6" width="4" height="4" rx="2" fill="currentColor" />
                                                 </svg>
                                             </span>
                                             <!--end::Svg Icon-->
@@ -411,14 +406,12 @@
                                             <span class="svg-icon svg-icon-2 svg-icon-primary">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M2 16C2 16.6 2.4 17 3 17H21C21.6 17 22 16.6 22 16V15H2V16Z"
+                                                    <path d="M2 16C2 16.6 2.4 17 3 17H21C21.6 17 22 16.6 22 16V15H2V16Z"
                                                         fill="currentColor" />
                                                     <path opacity="0.3"
                                                         d="M21 3H3C2.4 3 2 3.4 2 4V15H22V4C22 3.4 21.6 3 21 3Z"
                                                         fill="currentColor" />
-                                                    <path opacity="0.3" d="M15 17H9V20H15V17Z"
-                                                        fill="currentColor" />
+                                                    <path opacity="0.3" d="M15 17H9V20H15V17Z" fill="currentColor" />
                                                 </svg>
                                             </span>
                                             <!--end::Svg Icon-->
@@ -427,8 +420,7 @@
                                     <!--end::Symbol-->
                                     <!--begin::Title-->
                                     <div class="d-flex flex-column">
-                                        <a href="#"
-                                            class="fs-6 text-gray-800 text-hover-primary fw-semibold">BoomApp by
+                                        <a href="#" class="fs-6 text-gray-800 text-hover-primary fw-semibold">BoomApp by
                                             Keenthemes</a>
                                         <span class="fs-7 text-muted fw-semibold">#45789</span>
                                     </div>
@@ -517,8 +509,7 @@
                                     <!--end::Symbol-->
                                     <!--begin::Title-->
                                     <div class="d-flex flex-column">
-                                        <a href="#"
-                                            class="fs-6 text-gray-800 text-hover-primary fw-semibold">Project
+                                        <a href="#" class="fs-6 text-gray-800 text-hover-primary fw-semibold">Project
                                             Reference FAQ</a>
                                         <span class="fs-7 text-muted fw-semibold">#67945</span>
                                     </div>
@@ -548,8 +539,8 @@
                                     <!--end::Symbol-->
                                     <!--begin::Title-->
                                     <div class="d-flex flex-column">
-                                        <a href="#"
-                                            class="fs-6 text-gray-800 text-hover-primary fw-semibold">"FitPro App
+                                        <a href="#" class="fs-6 text-gray-800 text-hover-primary fw-semibold">"FitPro
+                                            App
                                             Development</a>
                                         <span class="fs-7 text-muted fw-semibold">#84250</span>
                                     </div>
@@ -579,8 +570,8 @@
                                     <!--end::Symbol-->
                                     <!--begin::Title-->
                                     <div class="d-flex flex-column">
-                                        <a href="#"
-                                            class="fs-6 text-gray-800 text-hover-primary fw-semibold">Shopix Mobile
+                                        <a href="#" class="fs-6 text-gray-800 text-hover-primary fw-semibold">Shopix
+                                            Mobile
                                             App</a>
                                         <span class="fs-7 text-muted fw-semibold">#45690</span>
                                     </div>
@@ -609,8 +600,8 @@
                                     <!--end::Symbol-->
                                     <!--begin::Title-->
                                     <div class="d-flex flex-column">
-                                        <a href="#"
-                                            class="fs-6 text-gray-800 text-hover-primary fw-semibold">"Landing UI
+                                        <a href="#" class="fs-6 text-gray-800 text-hover-primary fw-semibold">"Landing
+                                            UI
                                             Design" Launch</a>
                                         <span class="fs-7 text-muted fw-semibold">#24005</span>
                                     </div>
@@ -633,9 +624,8 @@
                                             d="M14 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V8L14 2Z"
                                             fill="currentColor" />
                                         <path d="M20 8L14 2V6C14 7.10457 14.8954 8 16 8H20Z" fill="currentColor" />
-                                        <rect x="13.6993" y="13.6656" width="4.42828" height="1.73089"
-                                            rx="0.865447" transform="rotate(45 13.6993 13.6656)"
-                                            fill="currentColor" />
+                                        <rect x="13.6993" y="13.6656" width="4.42828" height="1.73089" rx="0.865447"
+                                            transform="rotate(45 13.6993 13.6656)" fill="currentColor" />
                                         <path
                                             d="M15 12C15 14.2 13.2 16 11 16C8.8 16 7 14.2 7 12C7 9.8 8.8 8 11 8C13.2 8 15 9.8 15 12ZM11 9.6C9.68 9.6 8.6 10.68 8.6 12C8.6 13.32 9.68 14.4 11 14.4C12.32 14.4 13.4 13.32 13.4 12C13.4 10.68 12.32 9.6 11 9.6Z"
                                             fill="currentColor" />
@@ -671,10 +661,8 @@
                             <div class="nav-group nav-group-fluid">
                                 <!--begin::Option-->
                                 <label>
-                                    <input type="radio" class="btn-check" name="type" value="has"
-                                        checked="checked" />
-                                    <span
-                                        class="btn btn-sm btn-color-muted btn-active btn-active-primary">All</span>
+                                    <input type="radio" class="btn-check" name="type" value="has" checked="checked" />
+                                    <span class="btn btn-sm btn-color-muted btn-active btn-active-primary">All</span>
                                 </label>
                                 <!--end::Option-->
                                 <!--begin::Option-->
@@ -704,9 +692,8 @@
                         <!--end::Input group-->
                         <!--begin::Input group-->
                         <div class="mb-5">
-                            <input type="text" name="assignedto"
-                                class="form-control form-control-sm form-control-solid" placeholder="Assigned to"
-                                value="" />
+                            <input type="text" name="assignedto" class="form-control form-control-sm form-control-solid"
+                                placeholder="Assigned to" value="" />
                         </div>
                         <!--end::Input group-->
                         <!--begin::Input group-->
@@ -742,8 +729,7 @@
                         <!--begin::Input group-->
                         <div class="mb-5">
                             <select name="timezone" aria-label="Select a Timezone" data-control="select2"
-                                data-placeholder="date_period"
-                                class="form-select form-select-sm form-select-solid">
+                                data-placeholder="date_period" class="form-select form-select-sm form-select-solid">
                                 <option value="next">Within the next</option>
                                 <option value="last">Within the last</option>
                                 <option value="between">Between</option>
@@ -793,8 +779,7 @@
                         <div class="pb-4 border-bottom">
                             <label
                                 class="form-check form-switch form-switch-sm form-check-custom form-check-solid flex-stack">
-                                <span
-                                    class="form-check-label text-gray-700 fs-6 fw-semibold ms-0 me-2">Projects</span>
+                                <span class="form-check-label text-gray-700 fs-6 fw-semibold ms-0 me-2">Projects</span>
                                 <input class="form-check-input" type="checkbox" value="1" checked="checked" />
                             </label>
                         </div>
@@ -803,8 +788,7 @@
                         <div class="py-4 border-bottom">
                             <label
                                 class="form-check form-switch form-switch-sm form-check-custom form-check-solid flex-stack">
-                                <span
-                                    class="form-check-label text-gray-700 fs-6 fw-semibold ms-0 me-2">Targets</span>
+                                <span class="form-check-label text-gray-700 fs-6 fw-semibold ms-0 me-2">Targets</span>
                                 <input class="form-check-input" type="checkbox" value="1" checked="checked" />
                             </label>
                         </div>
@@ -823,8 +807,7 @@
                         <div class="py-4 border-bottom">
                             <label
                                 class="form-check form-switch form-switch-sm form-check-custom form-check-solid flex-stack">
-                                <span
-                                    class="form-check-label text-gray-700 fs-6 fw-semibold ms-0 me-2">Referrals</span>
+                                <span class="form-check-label text-gray-700 fs-6 fw-semibold ms-0 me-2">Referrals</span>
                                 <input class="form-check-input" type="checkbox" value="1" checked="checked" />
                             </label>
                         </div>
@@ -833,8 +816,7 @@
                         <div class="py-4 border-bottom">
                             <label
                                 class="form-check form-switch form-switch-sm form-check-custom form-check-solid flex-stack">
-                                <span
-                                    class="form-check-label text-gray-700 fs-6 fw-semibold ms-0 me-2">Users</span>
+                                <span class="form-check-label text-gray-700 fs-6 fw-semibold ms-0 me-2">Users</span>
                                 <input class="form-check-input" type="checkbox" value="1" />
                             </label>
                         </div>
@@ -865,8 +847,7 @@
                     data-kt-menu-placement="bottom-end">
                     <!--begin::Svg Icon | path: icons/duotune/general/gen060.svg-->
                     <span class="svg-icon theme-light-show svg-icon-2">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M11.9905 5.62598C10.7293 5.62574 9.49646 5.9995 8.44775 6.69997C7.39903 7.40045 6.58159 8.39619 6.09881 9.56126C5.61603 10.7263 5.48958 12.0084 5.73547 13.2453C5.98135 14.4823 6.58852 15.6185 7.48019 16.5104C8.37186 17.4022 9.50798 18.0096 10.7449 18.2557C11.9818 18.5019 13.2639 18.3757 14.429 17.8931C15.5942 17.4106 16.5901 16.5933 17.2908 15.5448C17.9915 14.4962 18.3655 13.2634 18.3655 12.0023C18.3637 10.3119 17.6916 8.69129 16.4964 7.49593C15.3013 6.30056 13.6808 5.62806 11.9905 5.62598Z"
                                 fill="currentColor" />
@@ -899,8 +880,7 @@
                     <!--end::Svg Icon-->
                     <!--begin::Svg Icon | path: icons/duotune/general/gen061.svg-->
                     <span class="svg-icon theme-dark-show svg-icon-2">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M19.0647 5.43757C19.3421 5.43757 19.567 5.21271 19.567 4.93534C19.567 4.65796 19.3421 4.43311 19.0647 4.43311C18.7874 4.43311 18.5625 4.65796 18.5625 4.93534C18.5625 5.21271 18.7874 5.43757 19.0647 5.43757Z"
                                 fill="currentColor" />
@@ -1023,8 +1003,7 @@
                     data-kt-menu-trigger="click" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
                     <!--begin::Svg Icon | path: icons/duotune/communication/com013.svg-->
                     <span class="svg-icon svg-icon-1">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M6.28548 15.0861C7.34369 13.1814 9.35142 12 11.5304 12H12.4696C14.6486 12 16.6563 13.1814 17.7145 15.0861L19.3493 18.0287C20.0899 19.3618 19.1259 21 17.601 21H6.39903C4.87406 21 3.91012 19.3618 4.65071 18.0287L6.28548 15.0861Z"
                                 fill="currentColor" />
@@ -1085,8 +1064,7 @@
                         <div class="menu-sub menu-sub-dropdown w-175px py-4">
                             <!--begin::Menu item-->
                             <div class="menu-item px-3">
-                                <a href="../../demo11/dist/account/referrals.html"
-                                    class="menu-link px-5">Referrals</a>
+                                <a href="../../demo11/dist/account/referrals.html" class="menu-link px-5">Referrals</a>
                             </div>
                             <!--end::Menu item-->
                             <!--begin::Menu item-->
@@ -1096,8 +1074,7 @@
                             <!--end::Menu item-->
                             <!--begin::Menu item-->
                             <div class="menu-item px-3">
-                                <a href="../../demo11/dist/account/statements.html"
-                                    class="menu-link px-5">Payments</a>
+                                <a href="../../demo11/dist/account/statements.html" class="menu-link px-5">Payments</a>
                             </div>
                             <!--end::Menu item-->
                             <!--begin::Menu item-->
@@ -1142,15 +1119,14 @@
                             <span class="menu-title position-relative">Language
                                 <span
                                     class="fs-8 rounded bg-light px-3 py-2 position-absolute translate-middle-y top-50 end-0">English
-                                    <img class="w-15px h-15px rounded-1 ms-2"
-                                        src="assets/media/flags/united-states.svg" alt="" /></span></span>
+                                    <img class="w-15px h-15px rounded-1 ms-2" src="assets/media/flags/united-states.svg"
+                                        alt="" /></span></span>
                         </a>
                         <!--begin::Menu sub-->
                         <div class="menu-sub menu-sub-dropdown w-175px py-4">
                             <!--begin::Menu item-->
                             <div class="menu-item px-3">
-                                <a href="../../demo11/dist/account/settings.html"
-                                    class="menu-link d-flex px-5 active">
+                                <a href="../../demo11/dist/account/settings.html" class="menu-link d-flex px-5 active">
                                     <span class="symbol symbol-20px me-4">
                                         <img class="rounded-1" src="assets/media/flags/united-states.svg" alt="" />
                                     </span>English</a>
@@ -1250,8 +1226,7 @@
                     </span>
                     <!--end:Menu link-->
                     <!--begin:Menu sub-->
-                    <div
-                        class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown px-lg-2 py-lg-4 w-lg-200px">
+                    <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown px-lg-2 py-lg-4 w-lg-200px">
                         <!--begin:Menu item-->
                         <div class="menu-item">
                             <!--begin:Menu link-->
@@ -1299,32 +1274,6 @@
                                     </span>
                                     <!--end::Svg Icon-->
                                 </span>
-                                <span class="menu-title">Data Barang</span>
-                            </a>
-                            <!--end:Menu link-->
-                        </div>
-                        <!--end:Menu item-->
-                        <!--begin:Menu item-->
-                        <div class="menu-item">
-                            <!--begin:Menu link-->
-                            <a class="menu-link py-3"
-                                href="https://preview.keenthemes.com/html/metronic/docs/getting-started/changelog"
-                                target="blank">
-                                <span class="menu-icon">
-                                    <!--begin::Svg Icon | path: icons/duotune/coding/cod003.svg-->
-                                    <span class="svg-icon svg-icon-3">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M16.95 18.9688C16.75 18.9688 16.55 18.8688 16.35 18.7688C15.85 18.4688 15.75 17.8688 16.05 17.3688L19.65 11.9688L16.05 6.56876C15.75 6.06876 15.85 5.46873 16.35 5.16873C16.85 4.86873 17.45 4.96878 17.75 5.46878L21.75 11.4688C21.95 11.7688 21.95 12.2688 21.75 12.5688L17.75 18.5688C17.55 18.7688 17.25 18.9688 16.95 18.9688ZM7.55001 18.7688C8.05001 18.4688 8.15 17.8688 7.85 17.3688L4.25001 11.9688L7.85 6.56876C8.15 6.06876 8.05001 5.46873 7.55001 5.16873C7.05001 4.86873 6.45 4.96878 6.15 5.46878L2.15 11.4688C1.95 11.7688 1.95 12.2688 2.15 12.5688L6.15 18.5688C6.35 18.8688 6.65 18.9688 6.95 18.9688C7.15 18.9688 7.35001 18.8688 7.55001 18.7688Z"
-                                                fill="currentColor" />
-                                            <path opacity="0.3"
-                                                d="M10.45 18.9687C10.35 18.9687 10.25 18.9687 10.25 18.9687C9.75 18.8687 9.35 18.2688 9.55 17.7688L12.55 5.76878C12.65 5.26878 13.25 4.8687 13.75 5.0687C14.25 5.1687 14.65 5.76878 14.45 6.26878L11.45 18.2688C11.35 18.6688 10.85 18.9687 10.45 18.9687Z"
-                                                fill="currentColor" />
-                                        </svg>
-                                    </span>
-                                    <!--end::Svg Icon-->
-                                </span>
                                 <span class="menu-title">Pengaturan</span>
                             </a>
                             <!--end:Menu link-->
@@ -1335,71 +1284,16 @@
                 </div>
                 <!--end:Menu item-->
                 <!--begin:Menu item-->
+                <!--begin:Menu item-->
                 <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start"
-                    class="menu-item menu-lg-down-accordion menu-sub-lg-down-indention me-0 me-lg-2">
+                    class="menu-item menu-lg-down-accordion menu-sub-lg-down-indention me-0 me-lg-2" >
                     <!--begin:Menu link-->
-                    <span class="menu-link py-3">
+                    <a href="{{ route('barang.index')}}"> <span class="menu-link py-3">
                         <span class="menu-title">Barang</span>
                         <span class="menu-arrow d-lg-none"></span>
-                    </span>
+                    </span></a>
+                    
                     <!--end:Menu link-->
-                    <!--begin:Menu sub-->
-                    <div
-                        class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown px-lg-2 py-lg-4 w-lg-200px">
-                        <!--begin:Menu item-->
-                        <div class="menu-item">
-                            <!--begin:Menu link-->
-                            <a class="menu-link py-3"
-                                href="https://preview.keenthemes.com/html/metronic/docs/getting-started/changelog"
-                                target="blank">
-                                <span class="menu-icon">
-                                    <!--begin::Svg Icon | path: icons/duotune/coding/cod003.svg-->
-                                    <span class="svg-icon svg-icon-3">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M16.95 18.9688C16.75 18.9688 16.55 18.8688 16.35 18.7688C15.85 18.4688 15.75 17.8688 16.05 17.3688L19.65 11.9688L16.05 6.56876C15.75 6.06876 15.85 5.46873 16.35 5.16873C16.85 4.86873 17.45 4.96878 17.75 5.46878L21.75 11.4688C21.95 11.7688 21.95 12.2688 21.75 12.5688L17.75 18.5688C17.55 18.7688 17.25 18.9688 16.95 18.9688ZM7.55001 18.7688C8.05001 18.4688 8.15 17.8688 7.85 17.3688L4.25001 11.9688L7.85 6.56876C8.15 6.06876 8.05001 5.46873 7.55001 5.16873C7.05001 4.86873 6.45 4.96878 6.15 5.46878L2.15 11.4688C1.95 11.7688 1.95 12.2688 2.15 12.5688L6.15 18.5688C6.35 18.8688 6.65 18.9688 6.95 18.9688C7.15 18.9688 7.35001 18.8688 7.55001 18.7688Z"
-                                                fill="currentColor" />
-                                            <path opacity="0.3"
-                                                d="M10.45 18.9687C10.35 18.9687 10.25 18.9687 10.25 18.9687C9.75 18.8687 9.35 18.2688 9.55 17.7688L12.55 5.76878C12.65 5.26878 13.25 4.8687 13.75 5.0687C14.25 5.1687 14.65 5.76878 14.45 6.26878L11.45 18.2688C11.35 18.6688 10.85 18.9687 10.45 18.9687Z"
-                                                fill="currentColor" />
-                                        </svg>
-                                    </span>
-                                    <!--end::Svg Icon-->
-                                </span>
-                                <span class="menu-title">Barang Masuk</span>
-                            </a>
-                            <!--end:Menu link-->
-                        </div>
-                        <!--end:Menu item-->
-                        <!--begin:Menu item-->
-                        <div class="menu-item">
-                            <!--begin:Menu link-->
-                            <a class="menu-link py-3"
-                                href="https://preview.keenthemes.com/html/metronic/docs/getting-started/changelog"
-                                target="blank">
-                                <span class="menu-icon">
-                                    <!--begin::Svg Icon | path: icons/duotune/coding/cod003.svg-->
-                                    <span class="svg-icon svg-icon-3">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M16.95 18.9688C16.75 18.9688 16.55 18.8688 16.35 18.7688C15.85 18.4688 15.75 17.8688 16.05 17.3688L19.65 11.9688L16.05 6.56876C15.75 6.06876 15.85 5.46873 16.35 5.16873C16.85 4.86873 17.45 4.96878 17.75 5.46878L21.75 11.4688C21.95 11.7688 21.95 12.2688 21.75 12.5688L17.75 18.5688C17.55 18.7688 17.25 18.9688 16.95 18.9688ZM7.55001 18.7688C8.05001 18.4688 8.15 17.8688 7.85 17.3688L4.25001 11.9688L7.85 6.56876C8.15 6.06876 8.05001 5.46873 7.55001 5.16873C7.05001 4.86873 6.45 4.96878 6.15 5.46878L2.15 11.4688C1.95 11.7688 1.95 12.2688 2.15 12.5688L6.15 18.5688C6.35 18.8688 6.65 18.9688 6.95 18.9688C7.15 18.9688 7.35001 18.8688 7.55001 18.7688Z"
-                                                fill="currentColor" />
-                                            <path opacity="0.3"
-                                                d="M10.45 18.9687C10.35 18.9687 10.25 18.9687 10.25 18.9687C9.75 18.8687 9.35 18.2688 9.55 17.7688L12.55 5.76878C12.65 5.26878 13.25 4.8687 13.75 5.0687C14.25 5.1687 14.65 5.76878 14.45 6.26878L11.45 18.2688C11.35 18.6688 10.85 18.9687 10.45 18.9687Z"
-                                                fill="currentColor" />
-                                        </svg>
-                                    </span>
-                                    <!--end::Svg Icon-->
-                                </span>
-                                <span class="menu-title">Barang Keluar</span>
-                            </a>
-                            <!--end:Menu link-->
-                        </div>
-                        <!--end:Menu item-->
-                    </div>
-                    <!--end:Menu sub-->
                 </div>
                 <!--end:Menu item-->
                 <!--begin:Menu item-->
@@ -1407,7 +1301,7 @@
                     class="menu-item menu-lg-down-accordion menu-sub-lg-down-indention me-0 me-lg-2">
                     <!--begin:Menu link-->
                     <span class="menu-link py-3">
-                        <span class="menu-title">Pengolahan Data</span>
+                        <span class="menu-title">Pengolahan Barang</span>
                         <span class="menu-arrow d-lg-none"></span>
                     </span>
                     <!--end:Menu link-->

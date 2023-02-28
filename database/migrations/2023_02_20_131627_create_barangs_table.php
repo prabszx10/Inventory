@@ -14,8 +14,9 @@ return new class extends Migration
         Schema::create('barangs', function (Blueprint $table) {
             $table->string('barang_id',32)->primary();
             $table->string('barang_nama',100);
-            $table->text('barang_keterangan');
-            $table->double('barang_stock');
+            $table->string('barang_harga',100);
+            $table->text('barang_keterangan')->nullable();
+            $table->double('barang_stock')->nullable()->default('0');
             $table->string('barang_satuan',50);
             $table->string('barang_file',100)->nullable();
             $table->integer('barang_status')->default('1');

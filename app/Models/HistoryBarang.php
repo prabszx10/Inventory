@@ -16,8 +16,8 @@ class HistoryBarang extends Model
         'history_barang_status'
     ];
 
-    public function barang()
-    {
-        return $this->belongsTo(Barang::class,'history_barang_barang_id');
-    }
+    // public function barang()
+    // {
+    //     return $this->belongsTo(Barang::class,'history_barang_barang_id');
+    // }
 }

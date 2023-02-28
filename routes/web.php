@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\BarangController;
+use App\Http\Controllers\HistoryBarangController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,14 +23,21 @@ Route::controller(DashboardController::class)->group(function () {
 Route::controller(UserController::class)->name('user.')->prefix('user')->group(function () {
     $route = array('index', 'insert', 'update','select');  
     foreach ($route as $route) {
-        Route::any('/'.$route=='index'?'':$route, $route)->name($route);
+        Route::any($route=='index'?'':'/'.$route, $route)->name($route);
     }
 });
 
 Route::controller(BarangController::class)->name('barang.')->prefix('barang')->group(function () {
     $route = array('index', 'insert', 'update','delete','select');  
     foreach ($route as $route) {
-        Route::any('/'.$route=='index'?'':$route, $route)->name($route);
+        Route::any($route=='index'?'':'/'.$route, $route)->name($route);
+    }
+});
+
+Route::controller(HistoryBarangController::class)->name('history_barang.')->prefix('history_barang')->group(function () {
+    $route = array('index', 'insert', 'update','delete','select');  
+    foreach ($route as $route) {
+        Route::any($route=='index'?'':'/'.$route, $route)->name($route);
     }
 });
 
