@@ -16,10 +16,10 @@ return new class extends Migration
             $table->string('history_barang_barang_id',32);
             $table->double('history_barang_stock');
             $table->string('history_barang_status',50);
+            $table->date('history_barang_tanggal');
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
             $table->foreign('history_barang_barang_id')->references('barang_id')->on('barangs')->onDelete('cascade');
-
         });
     }
 

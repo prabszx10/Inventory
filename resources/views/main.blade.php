@@ -35,6 +35,8 @@ License: For each use you must have a valid license purchased only from above li
 		<!--begin::Global Stylesheets Bundle(mandatory for all pages)-->
 		<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href="https://cdn.datatables.net/1.13.3/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
 		<!--end::Global Stylesheets Bundle-->
 	</head>
 	<!--end::Head-->
@@ -102,6 +104,20 @@ License: For each use you must have a valid license purchased only from above li
 		<script src="assets/js/custom/utilities/modals/users-search.js"></script>
 		<!--end::Custom Javascript-->
 		<!--end::Javascript-->
+		<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+		<script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
+		<script src="https://cdn.datatables.net/1.13.3/js/dataTables.bootstrap5.min.js"></script>
+		
+		<!-- include the Moment.js library from the jsDelivr CDN -->
+		<script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+
+
+		<script>
+			$(document).ready(function () {
+				$('#example').DataTable();
+				$('#table_modal').DataTable();
+			});	
+		</script>
 		@yield('js')
 	</body>
 	<!--end::Body-->

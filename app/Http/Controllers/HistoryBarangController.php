@@ -11,13 +11,22 @@ use Ramsey\Uuid\Uuid;
 
 class HistoryBarangController extends Controller
 {
+    public function index(){
+        return view('BackEnd.PengolahanBarang.index');
+    }
+
     public function select(Request $request){
         try {
             $data = $request->all();
             if(!isset($data['history_barang_status'])){
                 $operation = HistoryBarang::all();
             } else{
-                $operation = HistoryBarang::where('history_barang_status',$data['history_barang_status'])->get();
+                if(isset($data['history_barang_barang_id'])){
+                    $operation = HistoryBarang::where('history_barang_barang_id',$data['history_barang_barang_id'])->where('history_barang_status',$data['history_barang_status'])->get();
+                } else{
+                    $operation = HistoryBarang::where('history_barang_status',$data['history_barang_status'])->get();
+
+                }
             }
             return $this->response($operation);
         } catch (\Exception $e) {

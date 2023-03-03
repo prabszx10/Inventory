@@ -15,7 +15,11 @@ class BarangController extends Controller
 
     public function select(){
         try {
-            $operation = Barang::where('barang_status',1)->get();
+            if(isset($_GET['id'])){
+                $operation = Barang::where('barang_id',$_GET['id'])->where('barang_status',1)->get();
+            } else{
+                $operation = Barang::where('barang_status',1)->get();
+            }
             return $this->response($operation);
         } catch (\Exception $e) {
             return $this->response($e->getMessage(),true);
@@ -25,11 +29,9 @@ class BarangController extends Controller
     public function insert(Request $request){
         try {
             $data = $request->all();
-            // print_r($data);exit;
             $request->validate([
                 'barang_nama'=> 'required',
                 'barang_keterangan'=> 'required',
-                'barang_stock'=> 'required',
                 'barang_satuan'=> 'required',
                 'barang_harga'=> 'required',
             ]);
@@ -48,11 +50,11 @@ class BarangController extends Controller
             $request->validate([
                 'barang_nama'=> 'required',
                 'barang_keterangan'=> 'required',
-                'barang_stock'=> 'required',
                 'barang_satuan'=> 'required',
             ]);
             
             $data = $request->all();
+            unset($data['_token']);
             $operation = Barang::where('barang_id',$data['barang_id'])->update($data);
 
             return $this->responseUpdate($operation);

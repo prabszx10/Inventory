@@ -41,3 +41,5 @@ Route::controller(HistoryBarangController::class)->name('history_barang.')->pref
     }
 });
 
+
+

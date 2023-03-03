@@ -13,6 +13,7 @@ class HistoryBarang extends Model
         'history_barang_id',
         'history_barang_barang_id',
         'history_barang_stock',
+        'history_barang_tanggal',
         'history_barang_status'
     ];
 

@@ -1207,7 +1207,7 @@
                 id="#kt_header_menu" data-kt-menu="true">
                 <!--begin:Menu item-->
                 <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start"
-                    class="menu-item here show menu-here-bg menu-lg-down-accordion me-0 me-lg-2">
+                    class="menu-item here show menu-here-bg menu-lg-down-accordion me-0 me-lg-2" id="nav_dashboard">
                     <!--begin:Menu link-->
                     <span class="menu-link py-3">
                         <span class="menu-title">Dashboards</span>
@@ -1300,10 +1300,10 @@
                 <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start"
                     class="menu-item menu-lg-down-accordion menu-sub-lg-down-indention me-0 me-lg-2">
                     <!--begin:Menu link-->
-                    <span class="menu-link py-3">
+                    <a href="{{ route('history_barang.index')}}"> <span class="menu-link py-3">
                         <span class="menu-title">Pengolahan Barang</span>
                         <span class="menu-arrow d-lg-none"></span>
-                    </span>
+                    </span></a>
                     <!--end:Menu link-->
                 </div>
                 <!--end:Menu item-->
