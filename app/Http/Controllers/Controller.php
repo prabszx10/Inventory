@@ -29,7 +29,7 @@ class Controller extends BaseController
     }
 
     public function responseCreate($data='',$show=false){
-        if($data->wasRecentlyCreated){
+        if(isset($data->wasRecentlyCreated) || isset($data['success'])){
             $operation= array(
                 'status' => true,
                 'message'=>'Success To Save Data',
@@ -41,7 +41,7 @@ class Controller extends BaseController
         } else{
             $operation= array(
                 'status' => false,
-                'message'=> 'Failed To Save Data',
+                'message'=> $show?$data:'Failed To Save Data',
             );
         }
 
@@ -49,7 +49,7 @@ class Controller extends BaseController
     }
 
     public function responseUpdate($data='',$show=false){
-        if($data){
+        if($data==1){
             $operation= array(
                 'status' => true,
                 'message'=>'Success To Update Data',
@@ -66,7 +66,7 @@ class Controller extends BaseController
     }
 
     public function responseDelete($data='',$show=false){
-        if($data){
+        if($data==1 || isset($data['success'])){
             $operation= array(
                 'status' => true,
                 'message'=>'Success To Delete Data',

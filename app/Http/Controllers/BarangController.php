@@ -9,9 +9,17 @@ use Ramsey\Uuid\Uuid;
 
 class BarangController extends Controller
 {
+    public function index(){
+        return view('BackEnd.Barang.index');
+    }
+
     public function select(){
         try {
-            $operation = Barang::where('barang_status',1)->get();
+            if(isset($_GET['id'])){
+                $operation = Barang::where('barang_id',$_GET['id'])->where('barang_status',1)->get();
+            } else{
+                $operation = Barang::where('barang_status',1)->get();
+            }
             return $this->response($operation);
         } catch (\Exception $e) {
             return $this->response($e->getMessage(),true);
@@ -24,8 +32,8 @@ class BarangController extends Controller
             $request->validate([
                 'barang_nama'=> 'required',
                 'barang_keterangan'=> 'required',
-                'barang_stock'=> 'required',
                 'barang_satuan'=> 'required',
+                'barang_harga'=> 'required',
             ]);
             
             $uuid = Uuid::uuid5(Uuid::NAMESPACE_DNS, Str::random());
@@ -42,11 +50,11 @@ class BarangController extends Controller
             $request->validate([
                 'barang_nama'=> 'required',
                 'barang_keterangan'=> 'required',
-                'barang_stock'=> 'required',
                 'barang_satuan'=> 'required',
             ]);
             
             $data = $request->all();
+            unset($data['_token']);
             $operation = Barang::where('barang_id',$data['barang_id'])->update($data);
 
             return $this->responseUpdate($operation);

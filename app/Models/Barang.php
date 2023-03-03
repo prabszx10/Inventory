@@ -12,6 +12,7 @@ class Barang extends Model
     protected $fillable = [
         'barang_id',
         'barang_nama',
+        'barang_harga',
         'barang_keterangan',
         'barang_stock',
         'barang_satuan',
@@ -20,8 +21,8 @@ class Barang extends Model
         'barang_created_at',
     ];
 
-    public function history_barang()
-    {
-        return $this->hasMany(HistoryBarang::class);
-    }
+    // public function history_barang()
+    // {
+    //     return $this->hasMany(HistoryBarang::class);
+    // }
 }
