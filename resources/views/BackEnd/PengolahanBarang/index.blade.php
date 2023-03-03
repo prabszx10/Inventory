@@ -27,10 +27,8 @@
                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                 title="Isikan Nama Barang"></i>
                         </label>
-                        <select class="form-control  form-control-solid" name="history_barang_status" id="history_barang_status">
-                            <option value="" selected>Pilih Status</option>
-                            <option value="masuk">Barang Masuk</option>
-                            <option value="keluar">Barang Keluar</option>
+                        <select class="form-control  form-control-solid" name="history_barang_id" id="history_barang_id">
+                            <option value="" selected>Semua Data</option>
                         </select>
                     </div>
                     <div class="col-4">
@@ -40,13 +38,13 @@
                                 title="Isikan Nama Barang"></i>
                         </label>
                         <select class="form-control  form-control-solid" name="history_barang_status" id="history_barang_status">
-                            <option value="" selected>Pilih Status</option>
+                            <option value="" selected>Semua Data</option>
                             <option value="masuk">Barang Masuk</option>
                             <option value="keluar">Barang Keluar</option>
                         </select>
                     </div>
                     <div class="col-12 mt-3">
-                        <button type="submit" class="btn btn-lg btn-primary" style="width: 100%">Filter Data
+                        <button onclick="inittable()" type="button" class="btn btn-lg btn-primary" style="width: 100%">Filter Data
                             <span class="svg-icon svg-icon-3 ms-1 me-0">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -60,6 +58,19 @@
                         </button>
                     </div>
                 </div>
+                <div class="table-responsive mt-3">
+                    <table id="table_stock" class="table table-striped" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Nama</th>
+                                <th class="text-center">Tanggal</th>
+                                <th class="text-center">Status</th>
+                                <th class="text-center">Stock</th>
+                            </tr>
+                        </thead>
+                        <tbody id="list_table"></tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
@@ -67,5 +78,5 @@
 @endsection
 
 @section('js')
-@include('BackEnd.Barang.js')
+@include('BackEnd.PengolahanBarang.js')
 @endsection
