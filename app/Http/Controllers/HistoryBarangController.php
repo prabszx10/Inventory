@@ -88,4 +88,30 @@ class HistoryBarangController extends Controller
             return $this->responseDelete($e->getMessage(),true);
         }
     }
+
+    public function selectFilter(Request $request){
+        try {
+            $data = $request->all();
+            $where = '';
+            $condition = array();
+            foreach($data as $key =>$value){
+                if(isset($value)){
+                    if($where != ''){
+                        $where = $where.' AND ';
+                    }
+                    $where = $where.''.$key.' = "'.$value.'"';
+                }
+            }
+
+            if($where != ''){
+                $where = 'WHERE '.$where;
+            }
+
+            $query = DB::select('SELECT h.*,b.barang_nama,b.barang_satuan FROM history_barangs h LEFT JOIN barangs b ON h.history_barang_barang_id = b.barang_id '.$where.' ORDER BY h.history_barang_tanggal DESC');
+            $operation = json_decode(json_encode($query), true);
+            return $this->response($operation);
+        } catch (\Exception $e) {
+            return $this->response($e->getMessage(),true);
+        }
+    }
 }
