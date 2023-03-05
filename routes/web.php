@@ -35,7 +35,7 @@ Route::controller(BarangController::class)->name('barang.')->prefix('barang')->g
 });
 
 Route::controller(HistoryBarangController::class)->name('history_barang.')->prefix('history_barang')->group(function () {
-    $route = array('index', 'insert', 'update','delete','select','selectFilter');  
+    $route = array('index', 'insert', 'update','delete','select','selectFilter','export');  
     foreach ($route as $route) {
         Route::any($route=='index'?'':'/'.$route, $route)->name($route);
     }
