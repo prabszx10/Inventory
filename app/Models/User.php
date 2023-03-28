@@ -17,9 +17,13 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+    protected $primaryKey = 'user_id';
+
+
+
     protected $fillable = [
-        'name',
-        'email',
+        'user_username',
+        'user_email',
         'password',
     ];
 
@@ -28,6 +32,7 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+    
     protected $hidden = [
         'password',
         'remember_token',
@@ -41,4 +46,13 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    protected static function boot()
+    {
+        parent::boot();
+    
+        static::creating(function ($model) {
+            $model->user_id = Uuid::uuid4()->toString();
+        });
+    }
 }

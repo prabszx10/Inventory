@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Barang;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
-use Ramsey\Uuid\Uuid;
 
 class BarangController extends Controller
 {
@@ -36,8 +35,6 @@ class BarangController extends Controller
                 'barang_harga'=> 'required',
             ]);
             
-            $uuid = Uuid::uuid5(Uuid::NAMESPACE_DNS, Str::random());
-            $data['barang_id'] = md5($uuid->toString());
             $operation = Barang::create($data);
             return $this->responseCreate($operation);
         } catch (\Exception $e) {
