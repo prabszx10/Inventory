@@ -12,6 +12,9 @@ class Barang extends Model
     use HasFactory;
 
     protected $primaryKey = 'barang_id';
+    public $incrementing = false;
+    protected $keyType = 'string';
+    
     protected $fillable = [
         'barang_id',
         'barang_nama',

@@ -112,12 +112,7 @@ License: For each use you must have a valid license purchased only from above li
 		<script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 
 
-		<script>
-			$(document).ready(function () {
-				$('#example').DataTable();
-				$('#table_modal').DataTable();
-			});	
-		</script>
+
 		@yield('js')
 	</body>
 	<!--end::Body-->
