@@ -16,7 +16,6 @@ class UserCheck
     public function handle(Request $request, Closure $next)
     {
         if (!auth()->user()) {
-            // dd(auth()->user());
             return redirect()->route('login');
             // return redirect()->route('error.access_denied');
         }
