@@ -47,8 +47,6 @@ class HistoryBarangController extends Controller
             
             $check_barang = Barang::where('barang_id',$data['history_barang_barang_id'])->first();
             if($check_barang){
-                $uuid = Uuid::uuid5(Uuid::NAMESPACE_DNS, Str::random());
-                $data['history_barang_id'] = md5($uuid->toString());
                 $data['history_barang_barang_id'] = $check_barang['barang_id'];
                 if($data['history_barang_status'] == 'masuk'){
                     $barang['barang_stock'] = $check_barang['barang_stock'] + $data['history_barang_stock'];
@@ -94,23 +92,22 @@ class HistoryBarangController extends Controller
     public function selectFilter(Request $request){
         try {
             $data = $request->all();
-            $where = '';
-            $condition = array();
+
+            $where = array();
             foreach($data as $key =>$value){
                 if(isset($value)){
-                    if($where != ''){
-                        $where = $where.' AND ';
+                    if($key == 'tanggal_awal'){
+                        $condition = ['history_barang_tanggal','>=',$value];
+                    } else if($key == 'tanggal_akhir'){
+                        $condition = ['history_barang_tanggal','<=',$value];
+                    } else{
+                        $condition = [$key,$value];
                     }
-                    $where = $where.''.$key.' = "'.$value.'"';
+                    array_push($where,$condition);
                 }
             }
+            $operation = HistoryBarang::with('barang')->where($where)->get();
 
-            if($where != ''){
-                $where = 'WHERE '.$where;
-            }
-
-            $query = DB::select('SELECT h.*,b.barang_nama,b.barang_satuan FROM history_barangs h LEFT JOIN barangs b ON h.history_barang_barang_id = b.barang_id '.$where.' ORDER BY h.history_barang_tanggal DESC');
-            $operation = json_decode(json_encode($query), true);
             return $this->response($operation);
         } catch (\Exception $e) {
             return $this->response($e->getMessage(),true);
@@ -120,24 +117,22 @@ class HistoryBarangController extends Controller
     public function Export(Request $request){
         try {
             $data = $request->all();
-            $where = '';
-            $condition = array();
+            $where = array();
             foreach($data as $key =>$value){
                 if(isset($value)){
-                    if($where != ''){
-                        $where = $where.' AND ';
+                    if($key == 'tanggal_awal'){
+                        $condition = ['history_barang_tanggal','>=',$value];
+                    } else if($key == 'tanggal_akhir'){
+                        $condition = ['history_barang_tanggal','<=',$value];
+                    } else{
+                        $condition = [$key,$value];
                     }
-                    $where = $where.''.$key.' = "'.$value.'"';
+                    array_push($where,$condition);
                 }
             }
 
-            if($where != ''){
-                $where = 'WHERE '.$where;
-            }
-
-            $query = DB::select('SELECT h.*,b.barang_nama,b.barang_satuan FROM history_barangs h LEFT JOIN barangs b ON h.history_barang_barang_id = b.barang_id '.$where.' ORDER BY h.history_barang_tanggal DESC');
-            $history_barang = json_decode(json_encode($query), true);
-            return Excel::download(new BarangExport($history_barang), 'users.xlsx');
+            $history_barang = HistoryBarang::with('barang')->where($where)->get();
+            return Excel::download(new BarangExport($history_barang->toArray()), 'Barang.xlsx');
         } catch (\Exception $e) {
             return $this->response($e->getMessage(),true);
         }

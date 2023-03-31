@@ -24,7 +24,7 @@
             </div>
             <div class="card-body py-3">
                 <div class="table-responsive">
-                    <table id="example" class="table table-striped" style="width:100%">
+                    <table id="table_primary" class="display compact" style="width:100%">
                         <thead>
                             <tr>
                                 <th class="text-center">Nama</th>
@@ -33,7 +33,7 @@
                                 <th class="text-center">Action</th>
                             </tr>
                         </thead>
-                        <tbody id="list_table"></tbody>
+                        <tbody></tbody>
                     </table>
                 </div>
             </div>
@@ -137,20 +137,31 @@
                 </div>
             </div>
             <div class="modal-body py-lg-10 px-lg-10">
-                <div class="row" id="row_button"></div>
-                <div class="table-responsive mt-3">
-                    <table id="table_modal" class="table table-striped" style="width:100%">
-                        <thead>
-                            <tr>
-                                <th class="text-center">Tanggal</th>
-                                <th class="text-center">Status</th>
-                                <th class="text-center">Stock</th>
-                            </tr>
-                        </thead>
-                        <tbody id="list_stock"></tbody>
-                    </table>
-                </div>
-                <button type="button" class="btn btn-success col-12" onclick="onHide('form_modal','stock_add_modal')">
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation" style="width:49%">
+                      <button class="nav-link active" id="tab_masuk" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true" style="width:100%" onclick="onStockTable('masuk')">Stock Barang Masuk</button>
+                    </li>
+                    <li class="nav-item" role="presentation" style="width:49%">
+                      <button class="nav-link" id="tab_keluar" data-bs-toggle="pill"  data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-profile" aria-selected="false" style="width:100%" onclick="onStockTable('keluar')">Stock Barang Keluar</button>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                        <div class="table-responsive mt-3">
+                            <table id="table_secondary" class="table table-striped" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">Tanggal</th>
+                                        <th class="text-center">Status</th>
+                                        <th class="text-center">Stock</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="list_stock"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                  </div>
+                 <button type="button" class="btn btn-primary col-12" onclick="onHide('form_modal','stock_add_modal')">
                     <span class="svg-icon svg-icon-2">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -191,7 +202,8 @@
                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                 title="Isikan Nama Barang"></i>
                         </label>
-                        <input type="date" class="form-control  form-control-solid" name="history_barang_tanggal" value="" />
+                        <input type="date" class="form-control  form-control-solid" name="history_barang_tanggal"
+                            value="" />
                     </div>
 
                     <div class="fv-row mb-5">
@@ -211,7 +223,8 @@
                                 <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                     title="Isikan Nama Barang"></i>
                             </label>
-                            <select class="form-control  form-control-solid" name="history_barang_status" id="history_barang_status">
+                            <select class="form-control  form-control-solid" name="history_barang_status"
+                                id="history_barang_status">
                                 <option value="" selected disabled>Pilih Status</option>
                                 <option value="masuk">Barang Masuk</option>
                                 <option value="keluar">Barang Keluar</option>

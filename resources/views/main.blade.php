@@ -36,8 +36,30 @@ License: For each use you must have a valid license purchased only from above li
 		<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-		<link href="https://cdn.datatables.net/1.13.3/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+		<link href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+		
+		<!-- include select2 CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+
 		<!--end::Global Stylesheets Bundle-->
+
+		<style>
+			a{
+				text-decoration: none
+			}
+
+			table.dataTable tbody tr:hover {
+				cursor: pointer;
+				/* background-color: rgba(106,207,146,0.1); */
+				background-color: rgba(124, 126, 125, 0.1);
+			}
+
+			/* table.dataTable thead tr {
+				background-color: rgba(106,207,146,0.8);
+				color: white;
+			} */
+		</style>
 	</head>
 	<!--end::Head-->
 	<!--begin::Body-->
@@ -104,14 +126,32 @@ License: For each use you must have a valid license purchased only from above li
 		<script src="assets/js/custom/utilities/modals/users-search.js"></script>
 		<!--end::Custom Javascript-->
 		<!--end::Javascript-->
-		<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-		<script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
-		<script src="https://cdn.datatables.net/1.13.3/js/dataTables.bootstrap5.min.js"></script>
+		<!-- include jQuery and select2 JavaScript -->
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+		<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
 		
 		<!-- include the Moment.js library from the jsDelivr CDN -->
 		<script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 
+		<script>
+			var table = $('#table_primary').DataTable({
+				createdRow: function(row, data, dataIndex) {
+					$(row).css('text-align', 'center');
+				}
+			});
 
+			var table_secondary = $('#table_secondary').DataTable({
+				createdRow: function(row, data, dataIndex) {
+					$(row).css('text-align', 'center');
+				}
+			});	
+
+			$(document).ready(function() {
+  $('select').select2();
+});
+
+		</script>
 
 		@yield('js')
 	</body>

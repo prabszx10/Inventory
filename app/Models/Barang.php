@@ -27,10 +27,10 @@ class Barang extends Model
         'barang_created_at',
     ];
 
-    // public function history_barang()
-    // {
-    //     return $this->hasMany(HistoryBarang::class);
-    // }
+    public function history_barang()
+    {
+        return $this->hasMany(HistoryBarang::class);
+    }
 
     protected static function boot()
     {

@@ -9,13 +9,12 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
-
     public function response($data=''){
         if($data){
             $operation= array(
                 'status' => true,
                 'message'=>'Success To Load Data',
-                'total' => count($data),
+                'total' => is_array($data)?count($data):1,
                 'data'=>$data
             );
         } else{

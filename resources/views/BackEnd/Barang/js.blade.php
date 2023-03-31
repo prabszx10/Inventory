@@ -1,8 +1,6 @@
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.13.3/js/dataTables.bootstrap5.min.js"></script>
+
 <script>
-    
     var urlPath ={
         insert: "{{ route('barang.insert') }}",
         update: "{{ route('barang.update') }}",
@@ -12,6 +10,7 @@
         selectHistory: "{{ route('history_barang.select') }}",
     }
     inittable()
+    
 
     function onsave(){
         swal({
@@ -47,20 +46,16 @@
     }
 
     function inittable(){
+        table.clear();
         $.ajax({
             url: urlPath.select,
             type: 'GET',
             success: function(response){
                 if(response.status == true){
-                    $('#example').DataTable().clear();
-                    $('#list_table').html('')
+                    var array = []
                     $.each( response.data, function( k, v ){
-                        $('#list_table').append(`
-                            <tr>
-                                <td class="p-3">${v.barang_nama}</td>
-                                <td class="text-center">${v.barang_harga}</td>
-                                <td class="text-center">${v.barang_stock}</td>
-                                <td class="text-center">
+                        let html_action = `
+                            <td class="text-center">
 												<a href="javascript:onStock('masuk','${v.barang_id}','${v.barang_nama}')" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1">
 													<!--begin::Svg Icon | path: icons/duotune/general/gen019.svg-->
 													<span class="svg-icon svg-icon-3">
@@ -93,16 +88,16 @@
 													<!--end::Svg Icon-->
 												</a>
 											</td>
-                            </tr>
-                        `)
+                        `
+                        let push_array = [v.barang_nama,v.barang_harga,v.barang_stock,html_action]
+                        array.push(push_array);
                     });
-                    $('#example').DataTable().draw();
+
+                    table.rows.add(array).draw();    
                 } 
-                // 
             }
         })
-
-        
+        table.draw();
     }
 
     function onEdit(id){
@@ -154,30 +149,13 @@
 
     function onStock(type,id,nama){
         $('.stock_modal_nama').html(nama)
-        $('#row_button').html(`
-            <button type="button" class="btn col-6" onclick="onStockTable('masuk','${id}')" id="btn-masuk">Stock Barang Masuk</button>
-            <button type="button" class="btn col-6" onclick="onStockTable('keluar','${id}')" id="btn-keluar">Stock Barang Keluar</button>
-        `)
         $('[name=history_barang_barang_id]').val(id);
-        onStockTable(type,id)
+        onStockTable(type)
         $('#stock_modal').modal('show')
     }
 
-    function onStockTable(type,id){
-        $("#btn-masuk").removeClass("btn-primary");
-        $("#btn-keluar").removeClass("btn-secondary");
-        $("#btn-keluar").removeClass("btn-primary");
-        $("#btn-masuk").removeClass("btn-secondary");
-
-        if(type == 'masuk'){
-            $("#btn-masuk").addClass("btn-primary");
-            $("#btn-keluar").addClass("btn-secondary");
-            var badge = 'bg-success'
-        } else{
-            $("#btn-keluar").addClass("btn-primary");
-            $("#btn-masuk").addClass("btn-secondary");
-            var badge = 'bg-danger'
-        }
+    function onStockTable(type){
+        var id = $('[name=history_barang_barang_id]').val();
         
         $.ajax({
             url: urlPath.selectHistory,
@@ -188,17 +166,24 @@
             },
             success: function(response){
                 if(response.status == true){
-                    $('#list_stock').html('')
+                    if(type == 'masuk'){
+                        var badge = 'bg-success'
+                    } else{
+                        var badge = 'bg-danger'
+                    }
+                    
+                    table_secondary.clear(); 
+                    var array = []
                     $.each( response.data, function( k, v ){
                         var date = moment(v.history_barang_tanggal);
                         var formattedDate = date.format("dddd, DD MMMM YYYY");
-                        $('#list_stock').append(`
-                            <tr>
-                                <td class="text-center">${v.history_barang_tanggal}</td>
-                                <td class="text-center"><span class="badge ${badge}">${v.history_barang_status.toUpperCase()}</span></td>
-                                <td class="text-center">${v.history_barang_stock}</td>
-                        `)
+                        let html_status = ` <td class="text-center"><span class="badge ${badge}">${v.history_barang_status.toUpperCase()}</span></td>`
+
+                        let push_array = [date,html_status,v.history_barang_stock]
+                        array.push(push_array);
                     });
+
+                    table_secondary.rows.add(array).draw(); 
                 } 
             }
         })
@@ -230,6 +215,13 @@
                             swal("Success !", response.message, "success");
                             onStockTable(type,id)
                             onRefresh()
+                            $(".nav-link").removeClass("active");
+
+                            if(type == 'masuk'){
+                                $("#tab_masuk").addClass("active");
+                            } else{
+                                $("#tab_keluar").addClass("active");
+                            }
                         } else{
                             swal("Warning", response.message, "warning");
                         }

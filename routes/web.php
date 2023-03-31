@@ -51,4 +51,12 @@ Route::middleware(['user-check'])->group(function () {
             Route::any($route=='index'?'':'/'.$route, $route)->name($route);
         }
     });
+
+    Route::controller(CashierController::class)->name('cashier.')->prefix('cashier')->group(function () {
+        $route = array('index', 'insert', 'update','delete','select');  
+        foreach ($route as $route) {
+            Route::any($route=='index'?'':'/'.$route, $route)->name($route);
+        }
+    });
+
 });
