@@ -223,9 +223,8 @@
                                 <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                     title="Isikan Nama Barang"></i>
                             </label>
-                            <select class="form-control  form-control-solid" name="history_barang_status"
-                                id="history_barang_status">
-                                <option value="" selected disabled>Pilih Status</option>
+                            <select class="form-control" name="history_barang_status" id="history_barang_status">
+                                <option value="" selected>Semua Tipe</option>
                                 <option value="masuk">Barang Masuk</option>
                                 <option value="keluar">Barang Keluar</option>
                             </select>

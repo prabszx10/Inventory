@@ -15,7 +15,7 @@ class BarangController extends Controller
     public function select(){
         try {
             if(isset($_GET['id'])){
-                $operation = Barang::where('barang_id',$_GET['id'])->where('barang_status',1)->get();
+                $operation = Barang::where('barang_id',$_GET['id'])->where('barang_status',1)->first();
             } else{
                 $operation = Barang::where('barang_status',1)->get();
             }

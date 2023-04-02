@@ -53,7 +53,7 @@
                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                 title="Isikan Nama Barang"></i>
                         </label>
-                        <select class="form-control " name="history_barang_id" id="history_barang_id">
+                        <select class="form-control select2" name="history_barang_id" id="history_barang_id">
                             <option value="" selected>Semua Barang</option>
                         </select>
                     </div>
@@ -63,7 +63,7 @@
                             <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                 title="Isikan Nama Barang"></i>
                         </label>
-                        <select class="form-control" name="history_barang_status" id="history_barang_status">
+                        <select class="form-control select2" name="history_barang_status" id="history_barang_status">
                             <option value="" selected>Semua Tipe</option>
                             <option value="masuk">Barang Masuk</option>
                             <option value="keluar">Barang Keluar</option>

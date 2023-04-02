@@ -55,10 +55,12 @@ License: For each use you must have a valid license purchased only from above li
 				background-color: rgba(124, 126, 125, 0.1);
 			}
 
-			/* table.dataTable thead tr {
-				background-color: rgba(106,207,146,0.8);
-				color: white;
-			} */
+			.card_custom{
+				border: 1px solid rgba(106,207,146,0.2);
+				border-radius: 10px;
+				box-shadow: 5px 5px 5px rgba(106,207,146,0.3);
+				padding: 2vw 1vw;
+			}
 		</style>
 	</head>
 	<!--end::Head-->
@@ -138,6 +140,7 @@ License: For each use you must have a valid license purchased only from above li
 			var table = $('#table_primary').DataTable({
 				createdRow: function(row, data, dataIndex) {
 					$(row).css('text-align', 'center');
+					$(row).attr('id', 'row_' + data[0]);
 				}
 			});
 
@@ -148,7 +151,7 @@ License: For each use you must have a valid license purchased only from above li
 			});	
 
 			$(document).ready(function() {
-  $('select').select2();
+  $('.select2').select2();
 });
 
 		</script>

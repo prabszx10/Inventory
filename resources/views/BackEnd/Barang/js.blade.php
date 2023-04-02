@@ -10,7 +10,6 @@
         selectHistory: "{{ route('history_barang.select') }}",
     }
     inittable()
-    
 
     function onsave(){
         swal({

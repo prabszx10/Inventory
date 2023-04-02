@@ -6,6 +6,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\HistoryBarangController;
 use App\Http\Controllers\ErrorController;
+use App\Http\Controllers\CashierController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
